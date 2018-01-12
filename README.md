@@ -34,3 +34,33 @@ The following *dockup* environment variables should **not be overriden** if usin
 * **AFTER_BACKUP_CMD**
 * **AFTER_RESTORE_CMD**
 * **PATHS_TO_BACKUP**
+
+### Example
+This is what a postgres and backup service might look like in `docker-compose.yaml`.  Note the `dockup-postgres` specific variables in addition to others needed by [dockup](https://github.com/mimicmobile/dockup)
+```
+    backup:
+      links:
+        - postgres
+      environment:
+        - POSTGRES_PASS=passw0rd
+        - POSTGRES_HOST=postgres
+        - POSTGRES_DB=postgres
+        - AWS_ACCESS_KEY_ID=aws_key_id
+        - AWS_DEFAULT_REGION=us-east-1
+        - AWS_SECRET_ACCESS_KEY=aws_secret_key
+        - BACKUP_NAME=test
+        - PATHS_TO_BACKUP=/dockup/pgdump
+        - RESTORE=false
+        - S3_BUCKET_NAME=test-name
+        - S3_FOLDER=backups/
+      image: dockup-postgres:latest
+    postgres:
+      environment:
+        - POSTGRES_PASSWORD=passw0rd
+      image: postgres:latest
+      ports:
+        - 5432:5432
+      volumes:
+        - /var/lib/postgresql/data
+
+```
