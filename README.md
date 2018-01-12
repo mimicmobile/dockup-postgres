@@ -1,11 +1,11 @@
 dockup-postgres
 ============
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/jcorcoran/dockup-postgres.svg)](https://hub.docker.com/r/jcorcoran/dockup-postgres/)
-[![Docker Stars](https://img.shields.io/docker/stars/jcorcoran/dockup-postgres.svg)](https://hub.docker.com/r/jcorcoran/dockup-postgres/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jcorcoran/dockup-postgres.svg)](https://hub.docker.com/r/jcorcoran/dockup-postgres/)
-[![](https://images.microbadger.com/badges/image/jcorcoran/dockup-postgres.svg)](https://microbadger.com/images/jcorcoran/dockup-postgres "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/commit/jcorcoran/dockup-postgres.svg)](https://microbadger.com/images/jcorcoran/dockup-postgres "Get your own commit badge on microbadger.com")
+[![Docker Automated buil](https://img.shields.io/docker/automated/mimicmobile/dockup-postgres.svg)](https://hub.docker.com/r/mimicmobile/dockup-postgres/)
+[![Docker Stars](https://img.shields.io/docker/stars/mimicmobile/dockup-postgres.svg)](https://hub.docker.com/r/mimicmobile/dockup-postgres/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/mimicmobile/dockup-postgres.svg)](https://hub.docker.com/r/mimicmobile/dockup-postgres/)
+[![](https://images.microbadger.com/badges/image/mimicmobile/dockup-postgres.svg)](https://microbadger.com/images/mimicmobile/dockup-postgres "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/commit/mimicmobile/dockup-postgres.svg)](https://microbadger.com/images/mimicmobile/dockup-postgres "Get your own commit badge on microbadger.com")
 
 This is based on [dockup-mongo](https://github.com/robbyoconnor/dockup-mongo) but for postgres.
 Docker image to backup/restore your PostgreSQL DB to AWS S3.

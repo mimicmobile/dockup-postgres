@@ -1,4 +1,4 @@
-FROM jcorcoran/dockup:latest
+FROM mimicmobile/dockup:latest
 LABEL maintainer="Jeff Corcoran <jcorcoran+github@gmail.com>"
 ARG BUILD_DATE
 ARG VCS_REF
