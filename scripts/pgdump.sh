@@ -2,7 +2,7 @@
 
 source ./pgconfig.sh
 
-POSTGRES_BACKUP_CMD="/usr/bin/pg_dump -U ${POSTGRES_USER} -h ${POSTGRES_HOST} -p ${POSTGRES_PORT} -d ${POSTGRES_DB} ${POSTGRES_DUMP_EXTRA_OPTS} -f /dockup/pgdump/${POSTGRES_BACKUP_NAME}"
+POSTGRES_BACKUP_CMD="/usr/bin/pg_dump -Fc -U ${POSTGRES_USER} -h ${POSTGRES_HOST} -p ${POSTGRES_PORT} -d ${POSTGRES_DB} ${POSTGRES_DUMP_EXTRA_OPTS} -f /dockup/pgdump/${POSTGRES_BACKUP_NAME}"
 
 echo "Creating Postgres database dump..."
 eval "time $POSTGRES_BACKUP_CMD"

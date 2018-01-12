@@ -2,7 +2,7 @@
 
 source ./pgconfig.sh
 
-POSTGRES_RESTORE_CMD="/usr/bin/pg_restore /dockup/pgdump/${POSTGRES_BACKUP_NAME}"
+POSTGRES_RESTORE_CMD="/usr/bin/pg_restore -U ${POSTGRES_USER} -h ${POSTGRES_HOST} -p ${POSTGRES_PORT} -d ${POSTGRES_DB} --clean /dockup/pgdump/${POSTGRES_BACKUP_NAME}"
 
 echo "Restoring Postgres database dump..."
 eval "time $POSTGRES_RESTORE_CMD"
